@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - KV Rao International Foundation</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* Featured Healthcare Card */
+.healthcare-card {
+  border-radius: 20px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  grid-column: span 2; /* make it larger on wide screens */
+}
+
+.healthcare-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+.healthcare-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #1e90ff;
+}
+
+.healthcare-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.healthcare-card p strong {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.health-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.health-images img {
+  width: 45%;
+  border-radius: 12px;
+}
+
+/* Adjust for smaller screens */
+@media(max-width: 768px){
+  .healthcare-card { grid-column: span 1; }
+  .health-images { flex-direction: column; gap: 15px; }
+  .health-images img { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container header-flex">
+    <div class="logo-block">
+      <img src="images/Profile.jpg" alt="KV Rao" class="header-avatar">
+      <div class="logo">KV Rao International Foundation</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Who is KVRI</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Projects Page Content -->
+<section class="projects-page">
+  <div class="container">
+    <h2>Our Key Projects</h2>
+    <p>KV Rao International Foundation is actively working on initiatives to empower rural communities. Explore our flagship projects below.</p>
+
+    <div class="cards">
+
+      <!-- Healthcare Access (Featured, Larger) -->
+      <div class="card healthcare-card">
+        <div class="health-images">
+          <img src="images/blog1.jpg" alt="Healthcare Access 1">
+          <img src="images/blog2.jpg" alt="Healthcare Access 2">
+        </div>
+        <h3>Healthcare Access</h3>
+        <p>
+          Access to quality healthcare is a fundamental right, yet millions of people in underserved communities struggle to receive even basic medical attention.
+        </p>
+        <p><strong>KV Rao International Foundation providing free checkup and medicines in rural villages.</strong></p>
+        <a href="contact.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- Education Project -->
+      <div class="card">
+        <img src="images/education.jpg" alt="Educational Scholarships">
+        <h3>Educational Scholarships</h3>
+        <p>Supporting talented students across various disciplines to achieve their academic dreams.</p>
+        <a href="contact.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- Research Project -->
+      <div class="card">
+        <img src="images/research.jpg" alt="Research Initiatives">
+        <h3>Research Initiatives</h3>
+        <p>Promoting innovative research and scientific exploration for sustainable rural development.</p>
+        <a href="contact.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- Community Programs -->
+      <div class="card">
+        <img src="images/community.jpg" alt="Community Programs">
+        <h3>Community Programs</h3>
+        <p>Empowering local communities through outreach, training, and support programs.</p>
+        <a href="contact.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- Agriculture Empowerment -->
+      <div class="card">
+        <img src="images/agriculture.jpg" alt="Agriculture Empowerment">
+        <h3>Agriculture Empowerment</h3>
+        <p>Supporting farmers with modern techniques, training, and sustainable practices to boost productivity.</p>
+        <a href="contact.html" class="btn">Learn More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 KV Rao International Foundation. All rights reserved.</p>
+    <p>Contact: info@kvri.example | +91 98765 43210</p>
+  </div>
+</footer>
+
+</body>
+</html>

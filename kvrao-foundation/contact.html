@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - KV Rao International Foundation</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== GENERAL STYLES ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins','Segoe UI',Tahoma,Verdana,sans-serif; }
+body { line-height:1.7; color:#333; background-color:#f4f6f8; }
+.container { width:90%; max-width:1200px; margin:auto; padding:20px 0; }
+h2 { color:#1e90ff; margin-bottom:15px; text-align:center; }
+
+/* ===== HEADER ===== */
+header { background:#fff; padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 4px 8px rgba(0,0,0,0.05);}
+.header-flex { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.logo-block { display:flex; align-items:center; gap:15px; }
+.header-avatar { width:60px; height:60px; border-radius:50%; object-fit:cover; border:2px solid #1e90ff; }
+header .logo { font-size:1.6rem; font-weight:700; color:#1e90ff; }
+header nav ul { list-style:none; display:flex; gap:25px; }
+header nav ul li a { padding:8px 15px; border-radius:5px; color:#333; font-weight:500; }
+header nav ul li a.active,
+header nav ul li a:hover { background:linear-gradient(45deg,#1e90ff,#00bfff); color:#fff; transform:translateY(-2px); box-shadow:0 5px 15px rgba(30,144,255,0.3); }
+
+/* ===== CONTACT FORM ===== */
+.contact-page { padding:70px 20px; }
+.contact-form { max-width:650px; margin:auto; padding:40px; background:#fff; border-radius:20px; box-shadow:0 12px 25px rgba(0,0,0,0.1);}
+.contact-form label { display:block; font-weight:600; margin-bottom:8px; margin-top:15px; }
+.contact-form input, .contact-form textarea {
+    width:100%; padding:15px; border-radius:12px; border:1px solid #ccc; font-size:1rem; 
+    outline:none; transition: all 0.3s; font-family:'Poppins','Segoe UI',Tahoma,Verdana,sans-serif;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color:#1e90ff;
+    box-shadow:0 0 12px rgba(30,144,255,0.3);
+}
+.contact-form textarea { resize:none; line-height:1.6; }
+.contact-form button {
+    margin-top:25px; padding:15px 35px; border:none; border-radius:50px; 
+    background:linear-gradient(45deg,#1e90ff,#00bfff); color:#fff; font-weight:600; cursor:pointer; 
+    font-size:1rem; transition: all 0.3s ease;
+}
+.contact-form button:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(30,144,255,0.4); }
+
+/* ===== GOOGLE MAP ===== */
+.map-container { max-width:900px; margin:40px auto; border-radius:20px; overflow:hidden; box-shadow:0 12px 25px rgba(0,0,0,0.1);}
+.map-container iframe { width:100%; height:400px; border:0; }
+
+/* ===== FOOTER ===== */
+footer { background:#1e90ff; color:#fff; text-align:center; padding:35px 0; font-weight:600; margin-top:50px; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .header-flex{flex-direction:column; gap:15px;}
+  header nav ul{flex-direction:column; gap:10px;}
+  .contact-form{padding:25px;}
+  .map-container iframe{height:300px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="logo-block">
+      <img src="images/Profile.jpg" alt="KV Rao" class="header-avatar">
+      <div class="logo">KV Rao International Foundation</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Who is KVRI</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-page">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p style="text-align:center; margin-bottom:40px;">We would love to hear from you! Reach out for any queries, volunteering, or donations.</p>
+
+    <div class="contact-form">
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.123456789!2d78.4867!3d17.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97c0c1234567%3A0xabcdef1234567890!2sHyderabad%2C%20India!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 KV Rao International Foundation. All rights reserved.</p>
+    <p>Contact: info@kvri.example | +91 98765 43210</p>
+  </div>
+</footer>
+
+<script>
+// Open default email client with pre-filled data
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+
+    const mailToLink = `mailto:info@kvri.example?subject=Contact Form Submission from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage:%0A${message}`;
+
+    window.location.href = mailToLink;
+});
+</script>
+
+</body>
+</html>
